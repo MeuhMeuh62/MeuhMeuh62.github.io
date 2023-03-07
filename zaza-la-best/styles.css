@@ -1,0 +1,24 @@
+h1, h2 {
+    text-align: center;
+}
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+body {
+    background-color: rgb(90, 179, 235);
+}
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: x-large;
+}
+
+.yes {
+    border-radius: 42% 58% 36% 64% / 52% 77% 23% 48%;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0);
+}
