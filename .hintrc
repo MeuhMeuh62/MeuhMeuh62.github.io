@@ -35,6 +35,7 @@
         "nested-interactive": "off"
       }
     ],
-    "highest-available-document-mode": "off"
+    "highest-available-document-mode": "off",
+    "axe/name-role-value": "off"
   }
 }

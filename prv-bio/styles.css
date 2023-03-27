@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(194, 231, 255);
+    font-family: 'Montserrat', sans-serif;
+}
+.en-haut {
+    padding: 300px;
+    background-image: url(med/photo.jpg);
+    background-repeat: no-repeat;
+    text-align: end;
+    background-position: center;
+}
+.email, .tel, .rick{
+    padding: 200px;
+}
