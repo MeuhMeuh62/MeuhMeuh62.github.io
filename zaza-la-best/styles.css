@@ -22,3 +22,6 @@ p {
     border-radius: 42% 58% 36% 64% / 52% 77% 23% 48%;
     box-shadow: 10px 10px 0px rgba(0, 0, 0);
 }
+footer {
+    background-color: burlywood;
+}

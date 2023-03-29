@@ -106,3 +106,7 @@
     .btn-7 span:hover:after {
       width: 100%;
     }
+
+footer {
+      background-color: burlywood;
+}
