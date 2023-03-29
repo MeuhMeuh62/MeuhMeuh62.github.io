@@ -8,7 +8,11 @@ body {
     background-repeat: no-repeat;
     text-align: end;
     background-position: center;
+    text-shadow: 1cm;
 }
 .email, .tel, .rick{
     padding: 200px;
+}
+footer {
+    background-color: burlywood;
 }
