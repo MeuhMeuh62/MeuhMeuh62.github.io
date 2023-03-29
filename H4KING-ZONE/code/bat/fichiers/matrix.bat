@@ -1,5 +1,5 @@
 @echo off
-title ET paf
+title Matrix
 color 2
 :A
 echo %random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%
