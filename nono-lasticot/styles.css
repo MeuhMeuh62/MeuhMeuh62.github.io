@@ -4,8 +4,24 @@
 .oe {
     font-family: 'Roboto', sans-serif;
 }
+
+
+
+/*Commentaire*/
 footer {
-    background-color: rgba(222, 184, 135, 0.5);
+    background-color: rgb(240, 210, 170);
     text-align: center;
-    text-shadow: 5px;
+    font-family: 'Source Code Pro', monospace;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+.actualisation {
+    color: rgb(240, 210, 170);
+}
+.actualisation:hover {
+    color: rgba(0, 0, 0);
+}
+.meuhmeuhfoot {
+    text-decoration: wavy;
 }
