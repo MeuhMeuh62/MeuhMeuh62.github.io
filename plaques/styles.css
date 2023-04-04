@@ -1,0 +1,7 @@
+body {
+    background-color: rgba(100, 148, 237, 0.2);
+    font-family: 'Montserrat', sans-serif;
+}
+.Excel {
+    border-radius: 0% 10% 10% 10% / 0% 10% 10% 10%;
+}
