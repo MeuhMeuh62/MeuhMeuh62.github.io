@@ -1,0 +1,19 @@
+/*Footer*/
+footer {
+    background-color: rgb(240, 210, 170);
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+.actualisation {
+    color: rgb(240, 210, 170);
+}
+.actualisation:hover {
+    color: rgba(0, 0, 0);
+}
+.meuhmeuhfoot {
+    text-decoration: wavy;
+}
+/*Footer*/
