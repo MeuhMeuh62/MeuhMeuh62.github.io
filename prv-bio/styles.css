@@ -1,17 +1,16 @@
 body {
-    background-color: rgb(194, 231, 255);
+    background-color: skyblue;
     font-family: 'Montserrat', sans-serif;
 }
 .en-haut {
-    padding: 300px;
+    /*Margin + padding*/
+    padding: 16em;
+    margin: 1em;
     background-image: url(med/photo.jpg);
     background-repeat: no-repeat;
-    text-align: end;
     background-position: center;
-    text-shadow: 1cm;
-}
-.email, .tel, .rick{
-    padding: 200px;
+
+    border-radius: 5em 5em 5em 5em;
 }
 footer {
     background-color: burlywood;
