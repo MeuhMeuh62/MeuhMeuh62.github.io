@@ -2,6 +2,31 @@ body {
     background-color: rgba(100, 148, 237, 0.2);
     font-family: 'Montserrat', sans-serif;
 }
-.Excel {
-    border-radius: 0% 10% 10% 10% / 0% 10% 10% 10%;
+.P {
+    padding-left: 1em;
 }
+.Excel, .Carte {
+    border-radius: 0% 10% 10% 10% / 0% 10% 10% 10%;
+    padding: 1em;
+}
+
+
+/*Footer*/
+footer {
+    background-color: rgb(240, 210, 170);
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+.actualisation {
+    color: rgb(240, 210, 170);
+}
+.actualisation:hover {
+    color: rgba(0, 0, 0);
+}
+.meuhmeuhfoot {
+    text-decoration: wavy;
+}
+/*Footer*/
