@@ -37,6 +37,12 @@
       }
     ],
     "highest-available-document-mode": "off",
-    "axe/name-role-value": "off"
+    "axe/name-role-value": "off",
+    "axe/structure": [
+      "default",
+      {
+        "listitem": "off"
+      }
+    ]
   }
 }
