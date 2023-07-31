@@ -43,6 +43,13 @@
       {
         "listitem": "off"
       }
+    ],
+    "disown-opener": "off",
+    "axe/time-and-media": [
+      "default",
+      {
+        "meta-refresh": "off"
+      }
     ]
   }
 }
