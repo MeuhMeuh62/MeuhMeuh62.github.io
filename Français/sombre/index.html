@@ -21,6 +21,18 @@
         <p>Bienvenue sur mon site web !</p>
         </div>
         <script type="application/javascript">
+            var IP;
+          
+            function getIP(json) {
+              IP = json.ip;
+            }
+          </script>
+          
+          <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP">
+          </script>
+          <button id="clickButton">Show IP</button>
+          <div id="helloText"></div>
+        <script type="application/javascript">
             var myButton = document.getElementById("clickButton");
             var myText = document.getElementById("helloText");
         
