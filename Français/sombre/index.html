@@ -20,8 +20,8 @@
         <div style="text-align: center; font-size: 1.75em;">
         <p>Bienvenue sur mon site web !</p>
         </div>
+
         <div id="mydiv"></div>
-        <p>Test1</p>
     <script>
     var getIP = function(json) {
         document.getElementById("mydiv").innerHTML = json.ip;
@@ -33,40 +33,7 @@
     </script>
         
         
-        <p>Test2</p>
-        <script type="application/javascript">
-            var IP;
-          
-            function getIP(json) {
-              IP = json.ip;
-            }
-          </script>
-          
-          <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP">
-          </script>
-          <button id="clickButton">Show IP</button>
-          <div id="helloText"></div>
         
-        <p>Test3</p>
-        <script type="application/javascript">
-            var myButton = document.getElementById("clickButton");
-            var myText = document.getElementById("helloText");
-        
-            myButton.addEventListener('click A', doSomething(), false);
-        
-            function doSomething(json) {
-        
-                myText.textContent = (json.ip);
-            }
-        
-            function getIP(json) {
-                return json.ip;
-            }
-        
-        </script>
-        
-        <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP">
-        </script>
     </header>
 <body>
 
