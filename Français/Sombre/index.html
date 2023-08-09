@@ -9,20 +9,20 @@
 </head>
     <header style="background-color: #111; color: white; font-family: 'VT323', monospace; font-size: 1em;">
         <div style="text-align: left;">
-        <a class="cd_back" href="../"         >../</a>
+        <a class="cd_back" href="../../"         >../</a>
         <a class="lactive" href="liens/"      >liens/</a>
         <a class="lactive" href="projets/"    >projets/</a>
         <a class="lactive" href="suggestions/">suggestions/</a>
-        <a class="lactive" href="../white/"   >lumière/</a>
+        <a class="lactive" href="../Lumière/"   >lumière/</a>
         <a id="time"></a>
-        <a class="lactive" id="mydiv" >Bienvenue !</a>
+        <a class="lactive" id="mydiv" style="text-align: right;">Vous êtes hros-ligne ?</a>
         </div>
         <style>.cd_back {color: #333;} .cd_back:hover {color: #666;}</style>
         <style>.lactive {color: #fff;} .lactive:hover {color: #ccc;}</style>
 
     <script>
     var getIP = function(json) {
-        document.getElementById("mydiv").innerHTML = json.ip;
+        document.getElementById("mydiv").innerHTML = "bienvenue " + json.ip;
         }
     </script>
     <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP">
@@ -32,21 +32,19 @@
 
         <script>
             function startTime() {
-  var today = new Date();
-  var h = today.getHours();
-  var m = today.getMinutes();
-  var i = today.getSeconds();
-  m = checkTime(m);
-  document.getElementById('time').innerHTML =
-  "Il est "+h + ":" + m + ":" +i;
-  var t = setTimeout(startTime, 500);
-}
-function checkTime(i) {
-  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-  return i;
-}
-
-startTime();
+                var today = new Date();
+                var h = today.getHours();
+                var m = today.getMinutes();
+                var i = today.getSeconds();
+                function checkTime(i) {
+                    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+                    return i;
+                }   
+                m = checkTime(m);
+                document.getElementById('time').innerHTML = "Il est "+h + ":" + m + ":" +i;
+                var t = setTimeout(startTime, 500);
+            }
+            startTime();
         </script>
     </header>
 <body>
