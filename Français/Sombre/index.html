@@ -14,39 +14,55 @@
         <a class="lactive" href="projets/"    >projets/</a>
         <a class="lactive" href="suggestions/">suggestions/</a>
         <a class="lactive" href="../Lumière/"   >lumière/</a>
-        <a id="time"></a>
-        <a class="lactive" id="mydiv" style="text-align: right;">Vous êtes hros-ligne ?</a>
+        <div id="time"></div>
+        <div class="lactive" id="ip">Vous êtes hors-ligne ?</siv>
         </div>
         <style>.cd_back {color: #333;} .cd_back:hover {color: #666;}</style>
         <style>.lactive {color: #fff;} .lactive:hover {color: #ccc;}</style>
 
+
+
+
+
+        <!--SCRIPTS-->
+        <!--GET IP FOR HEADER-->
     <script>
-    var getIP = function(json) {
-        document.getElementById("mydiv").innerHTML = "bienvenue " + json.ip;
+        var getIP = function(json) {
+            document.getElementById("ip").innerHTML = "bienvenue " + json.ip;
         }
     </script>
     <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP">
     </script>
-        
-
-
+    <!--TIME-->
         <script>
             function startTime() {
                 var today = new Date();
                 var h = today.getHours();
                 var m = today.getMinutes();
                 var i = today.getSeconds();
-                function checkTime(i) {
-                    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-                    return i;
-                }   
                 m = checkTime(m);
                 document.getElementById('time').innerHTML = "Il est "+h + ":" + m + ":" +i;
                 var t = setTimeout(startTime, 500);
             }
+            function checkTime(i) {
+                if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+                return i;
+            }
             startTime();
         </script>
     </header>
+
+
+
+
+
+
+
+
+
+
+
+
 <body>
 
 </body>

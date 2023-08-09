@@ -1,3 +1,11 @@
+body {
+    background-color: #111;
+    font-family: 'VT323', monospace;
+    font-size: 1em;
+    color: #fff;
+}
+
+
 /*Footer*/
 footer {
     background-color: rgb(240, 210, 170);
