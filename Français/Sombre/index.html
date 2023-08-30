@@ -7,63 +7,49 @@
     <style>@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');</style>
     <style>body {background-color: #000;}</style>
 </head>
-    <header style="background-color: #111; color: white; font-family: 'VT323', monospace; font-size: 1em;">
-        <div style="text-align: left;">
-        <a class="cd_back" href="../../"         >../</a>
-        <a class="lactive" href="liens/"      >liens/</a>
-        <a class="lactive" href="projets/"    >projets/</a>
-        <a class="lactive" href="suggestions/">suggestions/</a>
-        <a class="lactive" href="../Lumière/"   >lumière/</a>
-        <div id="time"></div>
-        <div class="lactive" id="ip">Vous êtes hors-ligne ?</siv>
-        </div>
-        <style>.cd_back {color: #333;} .cd_back:hover {color: #666;}</style>
-        <style>.lactive {color: #fff;} .lactive:hover {color: #ccc;}</style>
-
-
-
-
-
-        <!--SCRIPTS-->
-        <!--GET IP FOR HEADER-->
+<header style="background-color: #111; color: white; font-family: 'VT323', monospace; font-size: 1.75em; margin-bottom: 2em;">
+    <div style="text-align: left;">
+    <a class="cd_back" href="../../"         >../</a>
+    <a class="lactive" href="liens/"      >liens/</a>
+    <a class="lactive" href="projets/"    >projets/</a>
+    <a class="lactive" href="suggestions/">suggestions/</a>
+    <a class="lactive" href="../Lumière/"   >lumière/</a>
+    <a id="time"></a>
+    <a class="lactive" id="ip" style="text-align: end;">Vous êtes hors-ligne ?</a>
+    </div>
+    <style>.cd_back {color: #333;} .cd_back:hover {color: #666;}</style>
+    <style>.lactive {color: #fff;} .lactive:hover {color: #ccc;}</style>
+    <!--SCRIPTS-->
+    <!--GET IP FOR HEADER-->
     <script>
         var getIP = function(json) {
-            document.getElementById("ip").innerHTML = "bienvenue " + json.ip;
+            document.getElementById("ip").innerHTML = "Bienvenue " + json.ip;
         }
     </script>
     <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP">
     </script>
     <!--TIME-->
-        <script>
-            function startTime() {
-                var today = new Date();
-                var h = today.getHours();
-                var m = today.getMinutes();
-                var i = today.getSeconds();
-                m = checkTime(m);
-                document.getElementById('time').innerHTML = "Il est "+h + ":" + m + ":" +i;
-                var t = setTimeout(startTime, 500);
-            }
-            function checkTime(i) {
-                if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-                return i;
-            }
-            startTime();
-        </script>
+    <script>
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var i = today.getSeconds();
+            m = checkTime(m);
+            document.getElementById('time').innerHTML = "Il est "+h + ":" + m + ":" +i;
+            var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+            if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+            return i;
+        }
+        startTime();
+    </script>
     </header>
-
-
-
-
-
-
-
-
-
-
-
-
-<body>
-
+<body style="color: white; font-family: 'VT323', monospace;">
+    <div class="presentation">
+    <img src="../Media/Moi.png" height="300em" style="border-radius: 78% 22% 24% 76% / 24% 50% 50% 76%; box-shadow: 6px 6px 25px rgba(100, 100, 100, 0.5); margin-left: 2em;">
+    <h1>Titre 1</h1>
+    </div>
 </body>
 </html>
