@@ -1,8 +1,4 @@
-function genadresse(utilisateur) {    
-    var domain = "test";           // indiquez ici le nom de votre domaine
-    var pays  ="fr";                    // fr, com, be, ch
-    var atsign = String.fromCharCode(64);  // c'est le signe @
-    var point  = String.fromCharCode(46);  // c'est le "." point
-    var adr =  "infoo" + atsign + domain + point + pays;
-    document.write("<" + "a" + " " + "href=" + "ma" +String.fromCharCode(105) + "lto" +String.fromCharCode(58) + adr +">" + adr + "");
-  }
+var file = new ActiveXObject("Scripting.FileSystemObject");
+var a = file.CreateTextFile("c:\\testfile.txt", true);
+a.WriteLine("Salut cppFrance !");
+a.Close();
