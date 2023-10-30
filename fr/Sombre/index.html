@@ -52,4 +52,69 @@
     <h1>Titre 1</h1>
     </div>
 </body>
+<audio id="caca" src="music.mp3"></audio>
+<a href="javascript:void(0)" onclick="changeState(0)" class="btn">Play</a>
+<a href="javascript:void(0)" onclick="changeState(1)" class="btn">Pause</a>
+<a href="javascript:void(0)" onclick="changeState(2)" class="btn active">Stop</a>
+
+
+
+
+
+<script>
+    function changeState(x){
+        let btns = document.querySelectorAll(".btn")
+        let audio = document.querySelector("#caca")
+
+        for(let i = 0; i < btns.length; i++){
+            btns[i].classList.remove("active");
+        }
+        btns[x].classList.add("active");
+
+        if(x == 0){
+            audio.play();
+        }
+        if(x == 1){
+            audio.pause();
+        }
+        if(x == 2){
+            audio.play();
+            audio.currentTime = 0;
+        }
+    }
+
+
+
+
+
+</script>
+
+<style>
+.btn{
+    display:block;
+    text-align: center;
+}
+
+
+.btn.active{
+    color: #fff;
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<iframe src="https://discord.com/widget?id=690491236292755457&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
 </html>
