@@ -14,7 +14,17 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1>Elsa est incroyable</h1>
+        <h1 style="animation: twistAnimation 5s linear infinite;">Elsa est incroyable</h1>
+        <style>
+            @keyframes twistAnimation {
+            0% {
+                transform: perspective(500px) rotateY(0deg);
+            }
+            100% {
+                transform: perspective(500px) rotateY(360deg);
+            }
+        }
+        </style>
         <h2>Vérifiée par des scientifiques</h2>
     </body>
     <footer>

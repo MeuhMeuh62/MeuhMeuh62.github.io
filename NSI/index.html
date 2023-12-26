@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        canvas {
+            display: block;
+        }
+    </style>
+    <title>Animation Cococotier</title>
+</head>
+<body>
+    <h1 class="title">sous le soleil des tropiques</h1>
+    <style>
+        .title {
+            text-align: center;
+            animation: twistAnimation 5s linear infinite;
+            background: linear-gradient(to right, #ff4500, #ffa500);
+            color: transparent; /* Rend le texte transparent pour montrer le dégradé à travers */
+            background-clip: text;
+            font-size: 75px;
+        }
+        @keyframes twistAnimation {
+            0% {
+                transform: perspective(500px) rotateY(0deg);
+            }
+            100% {
+                transform: perspective(500px) rotateY(360deg);
+            }
+        }
+    </style>
+    <style>
+        body {
+            background: url(media/bg.png) center/100% 100% no-repeat;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
+
+
+
+
+
+    <canvas id="cococotier"></canvas>
+
+   
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    const canvas = document.getElementById('cococotier');
+    const ctx = canvas.getContext('2d');
+
+    // Charger l'image
+    const image = new Image();
+    image.src = 'media/cocotier.png'; // Remplace cela par le chemin de ton image
+
+    const sprite = {
+        x: 500,
+        y: canvas.height / 600, // Position verticale au centre de l'écran
+        width: 300, // Ajuste la taille de ton image selon tes besoins
+        height: 300, // Ajuste la taille de ton image selon tes besoins
+        speed: 10,
+        direction: 1 // 1 pour droite, -1 pour gauche
+    };
+
+    function update() {
+        // Mise à jour de la position horizontale
+        sprite.x += sprite.speed * sprite.direction;
+
+        // Inverser la direction lorsqu'il atteint les bords
+        if (sprite.x + sprite.width > canvas.width || sprite.x < 0) {
+            sprite.direction = -sprite.direction;
+        }
+
+        // Mouvement en forme de sinus pour une courbe
+        sprite.y = canvas.height / 2 + Math.sin(sprite.x / 50) * 50; // Ajuste la courbe selon tes besoins
+    }
+
+    function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(image, sprite.x, sprite.y, sprite.width, sprite.height);
+    }
+
+    function loop() {
+        update();
+        draw();
+        requestAnimationFrame(loop);
+    }
+
+    // Attendre que l'image soit chargée avant de lancer l'animation
+    image.onload = function () {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        loop();
+    };
+</script>
+</html>
