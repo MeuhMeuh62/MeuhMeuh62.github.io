@@ -17,6 +17,7 @@
 </head>
 <body>
     <h1 class="title">sous le soleil des tropiques</h1>
+    <h1 class="title">L'amour se raconte en musique</h1>
     <style>
         .title {
             text-align: center;
@@ -42,12 +43,36 @@
             background-position: center;
         }
     </style>
+    <audio id="caca" src="media/music.mp3"></audio>
+    <script>
+        function changeState(x){
+            let btns = document.querySelectorAll(".btn")
+            let audio = document.querySelector("#caca")
+    
+            for(let i = 0; i < btns.length; i++){
+                btns[i].classList.remove("active");
+            }
+            btns[x].classList.add("active");
+    
+            if(x == 0){
+                audio.play();
+            }
+            if(x == 1){
+                audio.pause();
+            }
+            if(x == 2){
+                audio.play();
+                audio.currentTime = 0;
+            }
+        }
+    </script>
+<a href="javascript:void(0)" onclick="changeState(0)" class="btn">Play</a>
+<a href="javascript:void(0)" onclick="changeState(1)" class="btn">Pause</a>
 
 
 
 
-
-    <canvas id="cococotier"></canvas>
+    <canvas style="margin: 0px; padding: 0px; " id="cococotier"></canvas>
 
    
 </body>
@@ -83,9 +108,9 @@
 
     const sprite = {
         x: 500,
-        y: canvas.height / 600, // Position verticale au centre de l'écran
-        width: 300, // Ajuste la taille de ton image selon tes besoins
-        height: 300, // Ajuste la taille de ton image selon tes besoins
+        y: canvas.height / 0, // Position verticale au centre de l'écran
+        width: 500, // Ajuste la taille de ton image selon tes besoins
+        height: 100, // Ajuste la taille de ton image selon tes besoins
         speed: 10,
         direction: 1 // 1 pour droite, -1 pour gauche
     };
