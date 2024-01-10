@@ -1,167 +1,36 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
-
-
-
-    
-
-
-    <link href="media/cocotier.png" rel="icon" type="image/png"/>
-    <title>Sous le soleil des tropiques</title>
+    <title>Document</title>
 </head>
 <body>
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background: url(media/bg.png) center/100% 100% no-repeat;
-            background-repeat: no-repeat;
-            background-position: center;
-            margin: 0;
-            overflow: hidden;
-        }
-        /* texte h1 qui tourne */
-        .tourne {
-            text-align: center;
-            animation: twistAnimation 5s linear infinite;
-            background: linear-gradient(to right, #caaf15, #ff0000);
-            color: transparent;
-            background-clip: text;
-            font-size: 75px;
-        }
-        @keyframes twistAnimation {
-            0% {
-                transform: perspective(700px) rotateY(0deg);
-            }
-            100% {
-                transform: perspective(500px) rotateY(360deg);
-            }
-        }
-        /* les boutons media */
-        a {
-            color: rgb(216, 115, 48);
-        }
-        a:hover {
-            color: white;
-        }
-    </style>
-
-
-
-
-    <audio id="caca" src="media/music.mp3"></audio>
-
-
-
-
-
-
-
-
-
-
-
-    <script>
-        function changeState(x){
-            let btns = document.querySelectorAll(".btn")
-            let audio = document.querySelector("#caca")
-    
-            for(let i = 0; i < btns.length; i++){
-                btns[i].classList.remove("active");
-            }
-            btns[x].classList.add("active");
-    
-            if(x == 0){
-                audio.play();
-            }
-            if(x == 1){
-                audio.pause();
-            }
-            if(x == 2){
-                audio.play();
-                audio.currentTime = 0;
-            }
-        }
-    </script>
-
-        
-        <a href="javascript:void(0)" onclick="changeState(0)" class="btn">Play</a>
-        <a href="javascript:void(0)" onclick="changeState(1)" class="btn">Pause</a>
-        <h1 class="tourne">"des cocotiers qui dansent"</h1>
-    
-    
-
-
-    <canvas style="margin: 0px; padding: 0px;" id="cococotier"></canvas>
+    <div>
+        <p class="ip" id="ip">.....</p>
+    </div>
 </body>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- css -->
+<style>
+    .ip {
+        font-family: 'Montserrat', sans-serif;
+    }
+    p {
+        text-align: center;
+    }
+</style>
+<!--GET IP FOR HEADER-->
 <script>
-    //l'image
-    const canvas = document.getElementById('cococotier');
-    const ctx = canvas.getContext('2d');
-    const image = new Image();
-    image.src = 'media/cocotier.png';
-    const cocotiers = [];
-    function initCocotiers(numCocotiers) {
-        for (let i = 0; i < numCocotiers; i++) {
-            cocotiers.push({
-                x: Math.random() * 1000,//où spawn les cocotiers
-                y: Math.random() * 1000,
-                width: 500, //largeur et taille confs
-                height: 200,
-                speed: 10,
-                direction: Math.random() > 0.5 ? 1 : -1
-            });
-        }
+    var getIP = function(json) {
+        document.getElementById("ip").innerHTML = "" + json.ip;
     }
-    function update() {
-        for (const cocotier of cocotiers) {
-            cocotier.x += cocotier.speed * cocotier.direction;
-            if (cocotier.x + cocotier.width > canvas.width || cocotier.x < 0) {
-                cocotier.direction = -cocotier.direction;
-            }
-            cocotier.y = canvas.height / 2 + Math.sin(cocotier.x / 50) * 50;//ok j'ai copier sur internet cet effet de vague
-        }
-    }
-    function draw() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        for (const cocotier of cocotiers) {
-            ctx.drawImage(image, cocotier.x, cocotier.y, cocotier.width, cocotier.height);
-        }
-    }
-    function loop() {
-        update();
-        draw();
-        requestAnimationFrame(loop);
-    }
-    //att l'image
-    image.onload = function () {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        initCocotiers(10); //nb de cocotiers
-        loop();
-    };
+</script>
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP">
 </script>
 </html>
