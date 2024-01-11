@@ -1,6 +1,8 @@
+/* j'ajoute un style d'écriture */
 body {
     font-family: Roboto, sans-serif, sans-serif;
 }
+/* je mets le titre au milieu */
 h1 {
     text-align: center;
 }
