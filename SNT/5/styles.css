@@ -1,11 +1,15 @@
 /* Je sélectionne html pour que toute la page aie les modifications */
 html {
     background-image: url(https://images.pexels.com/photos/612999/pexels-photo-612999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
-    /* Image libre de droit */
+    /* Fond d'écran avec une image libre de droit */
     background-position: center;
-    /* Bien positioner le fond d'écran */
-    color: rgb(252, 252, 252);
+    /* Bien positioner le fond d'écran au centre */
+    color: white;
     /* Constraster le texte au fond d'écran */
     font-family: 'Genos', sans-serif;
     /* Ajouer la police personalisée */
+}
+/* Pour que les liens soient en blanc aussi */
+a {
+    color: white;
 }
