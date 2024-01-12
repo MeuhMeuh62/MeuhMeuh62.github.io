@@ -1,0 +1,11 @@
+body {
+    font-family: Arial, sans-serif;
+}
+/* change la police d'écriture */
+header {
+    text-align: center;
+}
+/* met le titre au milieu */
+div {
+    display: flex;
+}
