@@ -28,3 +28,8 @@ header {
     border-radius: 20px;
     border-style: outset;
 }
+a {
+    background: linear-gradient(to right, #caaf15, #ff0000);
+        color: transparent;
+        background-clip: text;
+}
