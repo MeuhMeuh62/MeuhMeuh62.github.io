@@ -15,7 +15,7 @@ p {
 .p_header_top {
     padding-top: 30px;
 }
-.p_header_bottom {
+.p_bottom {
     padding-bottom: 10px;
 }
 h2 {
@@ -24,4 +24,6 @@ h2 {
 header {
     background-color: black;
     color: aliceblue;
+    border-radius: 20px;
+    border-style: outset;
 }
