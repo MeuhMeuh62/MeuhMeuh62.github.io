@@ -19,6 +19,24 @@
     </div>
     <style>.cd_back {color: #333;} .cd_back:hover {color: #666;}</style>
     <style>.lactive {color: #fff;} .lactive:hover {color: #ccc;}</style>
+    </header>
+<body style="color: white; font-family: 'VT323', monospace;">
+    <div class="presentation">
+    <img src="../Media/Moi.png" height="300em" style="border-radius: 78% 22% 24% 76% / 24% 50% 50% 76%; box-shadow: 6px 6px 25px rgba(100, 100, 100, 0.5); margin-left: 2em;">
+    <h1>Titre 1</h1>
+    </div>
+</body>
+<audio id="caca" src="music.mp3"></audio>
+<a href="javascript:void(0)" onclick="changeState(0)" class="btn">Play</a>
+<a href="javascript:void(0)" onclick="changeState(1)" class="btn">Pause</a>
+<a href="javascript:void(0)" onclick="changeState(2)" class="btn active">Stop</a>
+
+
+
+
+
+
+
     <!--SCRIPTS-->
     <!--GET IP FOR HEADER-->
     <script>
@@ -45,22 +63,6 @@
         }
         startTime();
     </script>
-    </header>
-<body style="color: white; font-family: 'VT323', monospace;">
-    <div class="presentation">
-    <img src="../Media/Moi.png" height="300em" style="border-radius: 78% 22% 24% 76% / 24% 50% 50% 76%; box-shadow: 6px 6px 25px rgba(100, 100, 100, 0.5); margin-left: 2em;">
-    <h1>Titre 1</h1>
-    </div>
-</body>
-<audio id="caca" src="music.mp3"></audio>
-<a href="javascript:void(0)" onclick="changeState(0)" class="btn">Play</a>
-<a href="javascript:void(0)" onclick="changeState(1)" class="btn">Pause</a>
-<a href="javascript:void(0)" onclick="changeState(2)" class="btn active">Stop</a>
-
-
-
-
-
 <script>
     function changeState(x){
         let btns = document.querySelectorAll(".btn")
