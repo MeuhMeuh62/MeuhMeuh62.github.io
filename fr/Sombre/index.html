@@ -1,29 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background-color: #000;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>/Français/Sombre</title>
     <style>@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');</style>
-    <style>body {background-color: #000;}</style>
 </head>
-<header style="background-color: #111; color: white; font-family: 'VT323', monospace; font-size: 1.75em; margin-bottom: 2em;">
-    <div style="text-align: left;">
+<header style="background-color: #111; color: white; font-family: 'VT323', monospace; font-size: 1.75em; margin-bottom: 2em; display: flex;">
+    <style>
+        header {
+            display: flex;
+        }
+    </style>
+    <div style="display: flex;">
     <a class="cd_back" href="../../"         >../</a>
     <a class="lactive" href="liens/"      >liens/</a>
     <a class="lactive" href="projets/"    >projets/</a>
     <a class="lactive" href="suggestions/">suggestions/</a>
     <a class="lactive" href="../Lumière/"   >lumière/</a>
-    <div id="time"></div>
-    <div class="lactive" id="ip"">Vous êtes hors-ligne ?</div>
+    <div style="padding-left: 1em; margin: 0 auto;" id="time"></div>
+    <div style="padding-left: 1em; margin-right: auto;" class="lactive" id="ip">Vous êtes hors-ligne ?</div>
     </div>
     <style>.cd_back {color: #333;} .cd_back:hover {color: #666;}</style>
     <style>.lactive {color: #fff;} .lactive:hover {color: #ccc;}</style>
-    </header>
+</header>
 <body style="color: white; font-family: 'VT323', monospace;">
-    <div class="presentation">
+    <div class="presentation" style="display: flex;">
     <img src="../Media/Moi.png" height="300em" style="border-radius: 78% 22% 24% 76% / 24% 50% 50% 76%; box-shadow: 6px 6px 25px rgba(100, 100, 100, 0.5); margin-left: 2em;">
-    <h1>Titre 1</h1>
+        <div class="gros_titres" style="display: flex;">
+            <h1>Tom COUTTE</h1><h2 style="padding-left: 0.25em;">(MeuhMeuh62)</h2><br />
+        </div>
     </div>
 </body>
 <audio id="caca" src="music.mp3"></audio>
