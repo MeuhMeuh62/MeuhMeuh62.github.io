@@ -1,123 +1,93 @@
 <!DOCTYPE html>
-<html lang="en" style="background-color: #000;">
+<html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>/Français/Sombre</title>
-    <style>@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');</style>
+    <link href="styles.css" rel="stylesheet">
 </head>
-<header style="background-color: #111; color: white; font-family: 'VT323', monospace; font-size: 1.75em; margin-bottom: 2em; display: flex;">
-    <style>
-        header {
-            display: flex;
-        }
-    </style>
+
+<header>
     <div style="display: flex;">
-    <a class="cd_back" href="../../"         >../</a>
+    <a class="cd_back" href="../../"      >../</a>
     <a class="lactive" href="liens/"      >liens/</a>
     <a class="lactive" href="projets/"    >projets/</a>
     <a class="lactive" href="suggestions/">suggestions/</a>
-    <a class="lactive" href="../Lumière/"   >lumière/</a>
+    <a class="lactive" href="../Lumière/" >lumière/</a>
     <div style="padding-left: 1em; margin: 0 auto;" id="time"></div>
     <div style="padding-left: 1em; margin-right: auto;" class="lactive" id="ip">Vous êtes hors-ligne ?</div>
     </div>
-    <style>.cd_back {color: #333;} .cd_back:hover {color: #666;}</style>
-    <style>.lactive {color: #fff;} .lactive:hover {color: #ccc;}</style>
 </header>
-<body style="color: white; font-family: 'VT323', monospace;">
+
+<body>
     <div class="presentation" style="display: flex;">
     <img src="../Media/Moi.png" height="300em" style="border-radius: 78% 22% 24% 76% / 24% 50% 50% 76%; box-shadow: 6px 6px 25px rgba(100, 100, 100, 0.5); margin-left: 2em;">
         <div class="gros_titres" style="display: flex;">
             <h1>Tom COUTTE</h1><h2 style="padding-left: 0.25em;">(MeuhMeuh62)</h2><br />
-<p>Expert en cybersecurité & service informatique.</p>
         </div>
     </div>
+    <la-musique>
+        <audio id="caca" src="music.mp3"></audio>
+        <a href="javascript:void(0)" onclick="changeState(0)" class="btn">Play</a>
+        <a href="javascript:void(0)" onclick="changeState(1)" class="btn">Pause</a>
+        <a href="javascript:void(0)" onclick="changeState(2)" class="btn active">Stop</a>
+    </la-musique>
 </body>
-<audio id="caca" src="music.mp3"></audio>
-<a href="javascript:void(0)" onclick="changeState(0)" class="btn">Play</a>
-<a href="javascript:void(0)" onclick="changeState(1)" class="btn">Pause</a>
-<a href="javascript:void(0)" onclick="changeState(2)" class="btn active">Stop</a>
 
-
-
-
-
-
-
-    <!--SCRIPTS-->
-    <!--GET IP FOR HEADER-->
-    <script>
-        var getIP = function(json) {
-            document.getElementById("ip").innerHTML = "Bienvenue " + json.ip;
-        }
-    </script>
-    <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP">
-    </script>
-    <!--TIME-->
-    <script>
-        function startTime() {
-            var today = new Date();
-            var h = today.getHours();
-            var m = today.getMinutes();
-            var i = today.getSeconds();
-            m = checkTime(m);
-            document.getElementById('time').innerHTML = "Il est "+h + ":" + m + ":" +i;
-            var t = setTimeout(startTime, 500);
-        }
-        function checkTime(i) {
-            if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-            return i;
-        }
-        startTime();
-    </script>
-<script>
-    function changeState(x){
-        let btns = document.querySelectorAll(".btn")
-        let audio = document.querySelector("#caca")
-
-        for(let i = 0; i < btns.length; i++){
-            btns[i].classList.remove("active");
-        }
-        btns[x].classList.add("active");
-
-        if(x == 0){
-            audio.play();
-        }
-        if(x == 1){
-            audio.pause();
-        }
-        if(x == 2){
-            audio.play();
-            audio.currentTime = 0;
-        }
-    }
-</script>
-
-<style>
-.btn{
-    display:block;
-}
-
-
-.btn.active{
-    color: #fff;
-}
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<scripts>
+    <get-ip>
+        <script>
+            var getIP = function(json) {
+                document.getElementById("ip").innerHTML = "Bienvenue " + json.ip;
+            }
+        </script>
+        <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP">
+        </script>
+    </get-ip>
+    <time>
+        <script>
+            function startTime() {
+                var today = new Date();
+                var h = today.getHours();
+                var m = today.getMinutes();
+                var i = today.getSeconds();
+                m = checkTime(m);
+                document.getElementById('time').innerHTML = "Il est "+h + ":" + m + ":" +i;
+                var t = setTimeout(startTime, 500);
+            }
+            function checkTime(i) {
+                if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+                return i;
+            }
+            startTime();
+        </script>
+    </time>
+    <media>
+        <script>
+            function changeState(x){
+                let btns = document.querySelectorAll(".btn")
+                let audio = document.querySelector("#caca")
+                
+                for(let i = 0; i < btns.length; i++){
+                    btns[i].classList.remove("active");
+                }
+                btns[x].classList.add("active");
+                
+                if(x == 0){
+                    audio.play();
+                }
+                if(x == 1){
+                    audio.pause();
+                }
+                if(x == 2){
+                    audio.play();
+                    audio.currentTime = 0;
+                }
+            }
+        </script>
+    </media>
+</scripts>
 
 <iframe src="https://discord.com/widget?id=690491236292755457&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
 </html>
