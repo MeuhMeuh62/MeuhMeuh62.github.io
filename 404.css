@@ -1,0 +1,18 @@
+body {
+    background-image: url(media/jch5zpef8pg31-1406057227.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    font-family: Sixtyfour, sans-serif;
+}
+a {
+    color: #9998928f;
+    
+    text-underline-offset: 3px;
+}
+a:hover { 
+    color: white;
+}
+h1 {
+    color: white;
+    text-align: center;
+}
