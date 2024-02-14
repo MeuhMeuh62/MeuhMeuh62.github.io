@@ -14,9 +14,8 @@
     <a class="lactive" href="liens/"      >liens/</a>
     <a class="lactive" href="projets/"    >projets/</a>
     <a class="lactive" href="suggestions/">suggestions/</a>
-    <a class="lactive" href="../Lumière/" >lumière/</a>
     <div style="padding-left: 1em; margin: 0 auto;" id="time"></div>
-    <div style="padding-left: 1em; margin-right: auto;" class="lactive" id="ip">Vous êtes hors-ligne ?</div>
+    <div style="padding-left: 1em; margin-right: auto;" id="ip">Are you offline?</div>
     </div>
 </header>
 
@@ -53,7 +52,7 @@
                 var m = today.getMinutes();
                 var i = today.getSeconds();
                 m = checkTime(m);
-                document.getElementById('time').innerHTML = "Il est "+h + ":" + m + ":" +i;
+                document.getElementById('time').innerHTML = "There are "+h + ":" + m + ":" +i+ " UTC+1";
                 var t = setTimeout(startTime, 500);
             }
             function checkTime(i) {
