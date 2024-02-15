@@ -26,3 +26,10 @@ header {
     margin-bottom: 2em;
     display: flex;
 }
+a {
+    color: #ccc;
+    font-style: 5em;
+}
+a:hover {
+    color: #fff;
+}
