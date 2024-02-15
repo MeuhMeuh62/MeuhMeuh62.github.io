@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
+    background-color: #FFFFFF;
+    font-family: 'VT323', monospace;
+    color: #000;
+    line-height: 1.5em;
+    height: 100%;
+}
+.cd_back {
+    color: #333;
+}
+.cd_back:hover {
+    color: #666;
+}
+.dark-mode body {
+    background-color: #000;
+    color: #ffffff;
+}
+header {
+    display: flex;
+    background-color: #111;
+    color: white;
+    font-family: 'VT323', monospace;
+    font-size: 1.75em;
+    margin-bottom: 2em;
+    display: flex;
+}

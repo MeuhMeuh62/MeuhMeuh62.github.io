@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter-Strike 2</title>
+    <link href="index.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>MeuhMeuh62's Counter-Strike 2 fast utility links</h1>
+    <a href="https://csnades.gg" target="_blank">csnades.gg</a>
+</body>
+
+<scripts>
+    <!-- Copié de : https://stackoverflow.com/questions/65703809/is-it-possible-to-use-javascript-to-switch-between-light-mode-and-darkmode-on-a -->
+    <script>
+    if ("IntersectionObserver" in window)  {
+    window.dark = JSON.parse(window.localStorage.getItem("theme_mode"));
+    if (window.dark === null) { // First time - use prefers color to set the theme
+        if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            window.dark = true;
+            document.documentElement.className = document.documentElement.classList.add("dark-mode");
+        } else {
+            window.dark = false;
+        }
+        localStorage.setItem("theme_mode", JSON.stringify(window.dark));
+    } else if (window.dark === true) { // Returning user - prefers dark
+        document.documentElement.classList.add("dark-mode");
+    } // Returning user - prefers light - window.dark is false
+} else { // Browser is IE - hide dark mode stuff
+    document.documentElement.classList.add(" ie");
+}
+    </script>
+    <script>
+    var modeToggle = document.getElementById("light-dark-toggle");
+if (window.dark) {
+    modeToggle.checked = true;
+} else {
+    modeToggle.checked = false;
+}
+
+    
+modeToggle.addEventListener('change', function() {
+    window.dark = modeToggle.checked;
+    if (window.dark) {
+        document.documentElement.classList.add("dark-mode");
+    } else {
+        document.documentElement.classList.remove("dark-mode");
+    }
+    localStorage.setItem("theme_mode", JSON.stringify(window.dark));
+    lazyLoad();
+});
+
+    </script>
+</scripts>
+</html>
