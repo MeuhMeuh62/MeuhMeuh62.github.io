@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 body {
-    background-color: #FFFFFF;
+    background-color: #000000;
     font-family: 'VT323', monospace;
-    color: #000;
+    color: #ffffff;
     line-height: 1.5em;
     height: 100%;
 }
@@ -12,10 +12,6 @@ body {
 }
 .cd_back:hover {
     color: #666;
-}
-.dark-mode body {
-    background-color: #000;
-    color: #ffffff;
 }
 header {
     display: flex;
