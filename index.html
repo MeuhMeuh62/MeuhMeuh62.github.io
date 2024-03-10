@@ -1,27 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>/</title>
+    <title>MeuhMeuh62's page</title>
     <link href="flag.png" rel="icon" type="image/png"/>
     <style>@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');</style>
 </head>
 <body>
-    <style>body {margin: 3em; font-family: 'Ubuntu', sans-serif; color: white; background: linear-gradient(90deg, #111, #222);}</style>
-    <h1>Select your language</h1>
+    <style>body {margin: 3em; font-family: 'Source Code Pro Semibold', sans-serif; color: white; background: linear-gradient(90deg, #111, #222);}</style>
     <nav>
-        <style>.lien_select { color: #f2d200;} .lien_select:hover {color: yellow;}</style>
-        <li><a class="lien_select" href="en/">$ cd English</a></li>
-        <li><a class="lien_select" href="fr/">$ cd Français</a></li>
+        <style>.lien_select { color: #7c98ff;} .lien_select:hover {color: yellow;}</style>
+        <div id="ip">hi o/</div>
+        <a class="lien_select" href="en/">en</a></li>
+        <a class="lien_select" href="fr/">fr</a></li>
     </nav>
 </body>
-<!--REDIRECTION AUTOMATIQUE-->
-    
-<meta http-equiv="refresh" content="5; url=YOUR_URL_HERE" />
-<script type="text/javascript">
-    window.location.href = "fr/";
-</script>
 
 <!--REDIRECTION AUTOMATIQUE-->
+    
+<!-- <meta http-equiv="refresh" content="5; url=YOUR_URL_HERE" />
+<script type="text/javascript">
+    window.location.href = "fr/";
+</script> -->
+
+<!--REDIRECTION AUTOMATIQUE-->
+<get-ip>
+    <script>
+        var getIP = function(json) {
+            document.getElementById("ip").innerHTML = "[" + json.ip + "@185.199.110.153 /]$ ls";
+        }
+    </script>
+    <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP">
+    </script>
+</get-ip>
 </html>
