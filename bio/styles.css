@@ -1,37 +1,28 @@
-body {
-    background-color: #111;
-    font-family: 'VT323', monospace;
-    font-size: 1em;
-    color: #fff;
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+html {
+    background-color: #000;
+    color: white;
+    font-family: 'VT323', monospace; font-size: 1.75em;
 }
-
-
-/*Footer*/
-footer {
-    background-color: rgb(240, 210, 170);
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    margin: 0px;
-    padding: 0px;
-    text-decoration: none;
+.pfp {
+    border-radius: 50%;
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    transform: translate(-50%,-50%);
 }
-.actualisation {
-    color: rgb(240, 210, 170);
+.top{
+    display: flex;
 }
-.actualisation:hover {
-    color: rgba(0, 0, 0);
+.yo {
+    position: absolute;
+    top: 35%;
+    right: 0%;
+    transform: translate(-50%,-50%);
 }
-.meuhmeuhfoot {
-    text-decoration: wavy;
+.pres {
+    position: absolute;
+    top: 45%;
+    right: 10.5%;
+    transform: translate(-50%,-50%);
 }
-/*Footer*/
-
-/*Body*/
-.pp {
-    width: 300px;
-    
-}
-
-
-
-/*Body*/

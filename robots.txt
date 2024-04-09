@@ -2,3 +2,4 @@ User-agent: *
 Allow: /fr/
 Disallow: /bio/
 DIsallow: /H4KING-ZINE
+DIsallow: /jeanne
